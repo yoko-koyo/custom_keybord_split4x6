@@ -71,12 +71,7 @@
 
         left-shift {
             bindings = <&kp LEFT_SHIFT>;
-            key-positions = <12 13>;
-        };
-
-        right-shift {
-            bindings = <&kp RIGHT_SHIFT>;
-            key-positions = <21 22>;
+            key-positions = <38 39>;
         };
 
         backspace {
@@ -102,6 +97,21 @@
         del {
             bindings = <&kp DELETE>;
             key-positions = <8 9>;
+        };
+
+        windowLeft {
+            bindings = <&kp LC(LEFT_ARROW)>;
+            key-positions = <12 13>;
+        };
+
+        windowRight {
+            bindings = <&kp LC(RIGHT_ARROW)>;
+            key-positions = <21 22>;
+        };
+
+        windowUp {
+            bindings = <&kp LC(UP_ARROW)>;
+            key-positions = <15 19>;
         };
     };
 
