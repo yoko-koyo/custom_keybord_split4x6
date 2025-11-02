@@ -87,6 +87,16 @@
             bindings = <&kp DELETE>;
             key-positions = <21 22>;
         };
+
+        alt+bcsp {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <9 10>;
+        };
+
+        command+bcsp {
+            bindings = <&kp LG(BACKSPACE)>;
+            key-positions = <30 31>;
+        };
     };
 
     keymap {
