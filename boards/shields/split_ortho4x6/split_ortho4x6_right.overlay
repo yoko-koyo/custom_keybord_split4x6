@@ -13,7 +13,7 @@
         22
     >;
 };
-
+                
 / {
     chosen {
         zmk,physical-layout = &physical_layout0;
