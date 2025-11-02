@@ -78,16 +78,6 @@
             key-positions = <20 21>;
         };
 
-        teb {
-            bindings = <&kp TAB>;
-            key-positions = <20 19>;
-        };
-
-        del {
-            bindings = <&kp DELETE>;
-            key-positions = <21 22>;
-        };
-
         alt+bcsp {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <9 10>;
@@ -96,6 +86,16 @@
         command+bcsp {
             bindings = <&kp LG(BACKSPACE)>;
             key-positions = <30 31>;
+        };
+
+        teb {
+            bindings = <&kp TAB>;
+            key-positions = <20 19>;
+        };
+
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <21 22>;
         };
     };
 
