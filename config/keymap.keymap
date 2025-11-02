@@ -74,6 +74,11 @@
             key-positions = <12 13>;
         };
 
+        right-shift {
+            bindings = <&kp RIGHT_SHIFT>;
+            key-positions = <21 22>;
+        };
+
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <20 21>;
@@ -97,11 +102,6 @@
         del {
             bindings = <&kp DELETE>;
             key-positions = <8 9>;
-        };
-
-        right-shift {
-            bindings = <&kp RIGHT_SHIFT>;
-            key-positions = <21 22>;
         };
     };
 
