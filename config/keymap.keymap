@@ -113,6 +113,16 @@
             bindings = <&kp LC(UP_ARROW)>;
             key-positions = <15 19>;
         };
+
+        windowDown {
+            bindings = <&kp LC(DOWN_ARROW)>;
+            key-positions = <13 21>;
+        };
+
+        search {
+            bindings = <&kp LA(F)>;
+            key-positions = <12 22>;
+        };
     };
 
     keymap {
