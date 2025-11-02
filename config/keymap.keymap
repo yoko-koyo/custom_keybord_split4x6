@@ -78,7 +78,7 @@
             key-positions = <20 21>;
         };
 
-        del {
+        teb {
             bindings = <&kp TAB>;
             key-positions = <20 19>;
         };
