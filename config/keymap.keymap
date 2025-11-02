@@ -4,69 +4,170 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    macros {
+        b0: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_DISC 0 &bt BT_SEL 0>, <&macro_press>;
+
+            label = "NEW_MACRO";
+        };
+
+        b1: b1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_DISC 1 &bt BT_SEL 1>;
+            label = "B1";
+        };
+
+        b2: b2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_DISC 2 &bt BT_SEL 2>;
+            label = "B2";
+        };
+    };
+
+    behaviors {
+        behaviorHoldTap180: behaviorHoldTap180 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BEHAVIORHOLDTAP180";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            require-prior-idle-ms = <0>;
+            tapping-term-ms = <180>;
+        };
+
+        behaviorTapDance1: behaviorTapDance1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BEHAVIORTAPDANCE1";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_1>, <&kp ENTER>, <&mo 1>;
+        };
+
+        behaviorHoldTap150: behaviorHoldTap150 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BEHAVIORHOLDTAP150";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+
+        behaviorHoldTapTap: behaviorHoldTapTap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BEHAVIORHOLDTAPTAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        left-shift {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <12 13>;
+        };
+
+        right-shift {
+            bindings = <&kp RIGHT_SHIFT>;
+            key-positions = <21 22>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <20 21>;
+        };
+
+        alt+bcsp {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <9 10>;
+        };
+
+        command+bcsp {
+            bindings = <&kp LG(BACKSPACE)>;
+            key-positions = <30 31>;
+        };
+
+        teb {
+            bindings = <&kp TAB>;
+            key-positions = <20 19>;
+        };
+
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <8 9>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         layer_0 {
             bindings = <
-&kp Q      &kp W     &kp E             &kp R  &kp T                   &mo 6      &kp MINUS  &kp Y        &kp U  &kp I      &kp O       &kp P
-&kp A      &kp S     &kp D             &kp F  &kp G                              &kp EQUAL  &kp H        &kp J  &kp K      &kp L       &kp BSPC
-&kp Z      &kp X     &kp C             &kp V  &kp B                                         &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp TAB
-&kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &mo 2  &mt LEFT_COMMAND LANG2  &kp SPACE  &kp ENTER  &lt 1 LANG1                                &mt RIGHT_SHIFT ESCAPE
+&kp Q           &kp W         &kp E             &kp R  &kp T                   &behaviorHoldTap180 6 LA(F)  &kp LA(LG(RIGHT_ARROW))  &kp Y                             &kp U  &kp I      &kp O       &kp P
+&kp A           &kp S         &kp D             &kp F  &kp G                                                &kp LA(LG(LEFT_ARROW))   &kp H                             &kp J  &kp K      &kp L       &kp MINUS
+&kp Z           &kp X         &kp C             &kp V  &kp B                                                                         &kp N                             &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &mt LEFT_COMMAND LANG2  &kp SPACE                    &kp ENTER                &behaviorHoldTap180 1 LANGUAGE_1                                &kp ESCAPE
             >;
         };
 
         layer_1 {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN           &kp HASH          &kp DOLLAR         &kp PERCENT    &trans  &kp UNDERSCORE  &kp QUESTION   &kp SLASH       &kp UP_ARROW    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp GRAVE        &kp NON_US_BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AMPERSAND          &kp PLUS        &kp CARET      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW       &trans
-&kp TILDE        &kp PIPE              &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp ASTERISK                           &kp SEMICOLON  &kp SQT         &kp LESS_THAN   &kp GREATER_THAN      &trans
-&trans           &trans                &trans            &trans             &trans         &trans  &trans          &trans                                                               &trans
+&kp EXCLAMATION  &kp AT_SIGN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT    &kp LS(LG(R))  &trans  &kp DOLLAR         &kp AMPERSAND   &kp UP_ARROW    &kp GRAVE         &kp BACKSLASH
+&kp QUESTION     &kp HASH      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON                     &trans  &kp DOUBLE_QUOTES  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp UNDERSCORE
+&kp CARET        &kp ASTERISK  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON                         &kp SQT            &kp SLASH       &kp LESS_THAN   &kp GREATER_THAN  &kp PLUS
+&trans           &trans        &trans                &trans                 &trans         &trans         &trans  &trans                                                               &trans
             >;
         };
 
         layer_2 {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN   &kp HASH                &kp DOLLAR               &kp PERCENT  &trans  &trans  &kp LCTRL     &kp AMPERSAND      &kp ASTERISK  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3            &kp NUMBER_4             &kp N5               &trans  &kp NUMBER_6  &kp N7             &kp N8        &kp N9            &trans
-&kp N0           &trans        &kp LG(LA(LEFT_ARROW))  &kp LA(LG(RIGHT_ARROW))  &trans                       &kp COLON     &kp DOUBLE_QUOTES  &kp COMMA     &kp PERIOD        &trans
-&trans           &trans        &trans                  &trans                   &trans       &trans  &trans  &trans                                                           &trans
+&kp Q   &kp LG(W)  &kp LC(UP_ARROW)        &kp LC(DOWN_ARROW)       &trans  &trans  &trans  &kp SLASH   &kp N7        &kp N8        &kp N9        &kp N0
+&trans  &trans     &kp LC(LEFT_ARROW)      &kp LC(RIGHT_ARROW)      &trans          &trans  &kp PERIOD  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans
+&trans  &trans     &kp LG(LA(LEFT_ARROW))  &kp LA(LG(RIGHT_ARROW))  &trans                  &kp N0      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
+&trans  &trans     &trans                  &trans                   &trans  &trans  &trans  &trans                                                &trans
             >;
         };
 
         layer_3 {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &trans  &trans  &trans  &trans     &kp QUESTION        &kp LC(UP_ARROW)    &kp LEFT_BRACE       &kp RIGHT_BRACE
-&kp F5  &kp F6   &kp F7   &kp F8   &trans          &trans  &trans     &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &trans
-&kp F9  &kp F10  &kp F11  &kp F12  &trans                  &kp COLON  &kp DOUBLE_QUOTES   &trans              &trans               &trans
-&trans  &trans   &trans   &trans   &trans  &trans  &trans  &trans                                                                  &trans
+&kp F1  &kp F2   &kp F3   &kp F4   &trans                &trans  &trans  &trans  &trans              &kp LA(UP_ARROW)    &kp TILDE            &kp PIPE
+&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(NUMBER_4))          &trans  &trans  &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(UNDERSCORE)
+&kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))                        &trans  &trans              &trans              &trans               &trans
+&trans  &trans   &trans   &trans   &trans                &trans  &trans  &trans                                                               &trans
             >;
         };
 
         layer_4 {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans  &trans  &sys_reset   &trans              &trans  &trans    &trans  &bt BT_CLR_ALL
-&trans        &trans        &trans  &trans  &trans          &bootloader  &trans              &trans  &mkp MB1  &mo 5   &trans
-&trans        &trans        &trans  &trans  &trans                       &trans              &trans  &trans    &trans  &trans
-&trans        &trans        &trans  &trans  &trans  &trans  &kp LG(W)    &kp LG(LEFT_ARROW)                            &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans  &trans  &sys_reset   &trans              &trans    &trans    &trans  &bt BT_CLR_ALL
+&trans        &trans        &trans  &trans  &trans          &bootloader  &trans              &mkp MB2  &mkp MB1  &mo 5   &trans
+&trans        &trans        &trans  &trans  &trans                       &trans              &trans    &trans    &trans  &trans
+&trans        &trans        &trans  &trans  &trans  &trans  &kp LG(W)    &kp LG(LEFT_ARROW)                              &trans
             >;
         };
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans              &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans     &trans              &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                     &trans              &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LG(W)  &kp LG(LEFT_ARROW)                          &trans
             >;
         };
 
         layer_6 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LA(LEFT_ARROW))  &kp LC(UP_ARROW)    &kp LG(LA(RIGHT_ARROW))  &kp LG(RIGHT_ARROW)
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &kp LC(LEFT_ARROW)      &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)      &kp LG(LEFT_ARROW)
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans                  &trans              &trans                   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                       &trans
+&b0         &b1     &b2     &trans  &trans  &trans  &trans  &trans  &kp LG(LA(LEFT_ARROW))  &kp LC(UP_ARROW)    &kp LG(LA(RIGHT_ARROW))  &kp LG(RIGHT_ARROW)
+&trans      &trans  &trans  &trans  &trans          &trans  &trans  &kp LC(LEFT_ARROW)      &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)      &kp LG(LEFT_ARROW)
+&trans      &trans  &trans  &trans  &trans                  &trans  &trans                  &trans              &trans                   &trans
+&bt BT_CLR  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                       &trans
             >;
         };
     };

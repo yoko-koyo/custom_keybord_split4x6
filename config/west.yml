@@ -4,8 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: sekigon-gonnoc
       url-base: https://github.com/sekigon-gonnoc
-    - name: halfdane # ★ 追加: zmk-input-gestures 用のリモート
-      url-base: https://github.com/halfdane
+    # - name: halfdane # ★ 追加: zmk-input-gestures 用のリモート
+    #   url-base: https://github.com/halfdane
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -16,8 +16,8 @@ manifest:
       revision: main
     - name: zmk-driver-iqs7211e
       remote: sekigon-gonnoc
-    - name: zmk-input-gestures # ★ 追加: ジェスチャーモジュール
-      remote: halfdane
-      revision: main
+    # - name: zmk-input-gestures # ★ 追加: ジェスチャーモジュール
+    #   remote: halfdane
+    #   revision: main
   self:
     path: config
