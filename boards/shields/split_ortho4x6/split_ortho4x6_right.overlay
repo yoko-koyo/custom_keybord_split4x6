@@ -63,14 +63,7 @@
             &zip_x_scaler 1 1
             &zip_y_scaler 1 1
         >;
-
-        // input-processors = <
-        //     &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
-        //     &zip_temp_layer 4 10000
-        //     &zip_x_scaler 29 17
-        //     &zip_y_scaler 29 17
-        // >;
-
+        
         scroller {
             layers = <5 2>;
             input-processors = <
@@ -88,18 +81,18 @@
         status = "okay";
 
         // スクロール用(カーソル操作はできない) 
-        // input-processors = <
-        //     &zip_xy_to_scroll_mapper                 /* XY → スクロール変換 */
-        //     &zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT) /* スクロール方向調整（Y反転） */
-        //     &zip_scroll_scaler 5 22                  /* スクロール速度 */
-        // >;
+        input-processors = <
+            &zip_xy_to_scroll_mapper                 /* XY → スクロール変換 */
+            &zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT) /* スクロール方向調整（Y反転） */
+            &zip_scroll_scaler 5 22                  /* スクロール速度 */
+        >;
 
         // 通常のカースル操作用
-        input-processors = <
-            &zip_temp_layer 4 10000
-            &zip_x_scaler 30 21
-            &zip_y_scaler 30 21
-        >;
+        // input-processors = <
+        //     &zip_temp_layer 4 10000
+        //     &zip_x_scaler 30 21
+        //     &zip_y_scaler 30 21
+        // >;
 
         scroller {
             layers = <5>;
