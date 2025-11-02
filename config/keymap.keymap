@@ -75,12 +75,17 @@
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <19 20>;
+            key-positions = <20 21>;
         };
 
         del {
             bindings = <&kp TAB>;
-            key-positions = <20 21>;
+            key-positions = <20 19>;
+        };
+
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <21 22>;
         };
     };
 
