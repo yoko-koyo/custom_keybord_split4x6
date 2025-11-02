@@ -69,9 +69,9 @@
     combos {
         compatible = "zmk,combos";
 
-        shift {
+        left-shift {
             bindings = <&kp LEFT_SHIFT>;
-            key-positions = <38 39>;
+            key-positions = <12 13>;
         };
 
         backspace {
@@ -96,6 +96,11 @@
 
         del {
             bindings = <&kp DELETE>;
+            key-positions = <8 9>;
+        };
+
+        right-shift {
+            bindings = <&kp RIGHT_SHIFT>;
             key-positions = <21 22>;
         };
     };
