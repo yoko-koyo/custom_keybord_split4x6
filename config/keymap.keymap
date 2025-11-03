@@ -94,7 +94,7 @@
             key-positions = <20 19>;
         };
 
-        del {
+        shift+tab {
             bindings = <&kp DELETE>;
             key-positions = <8 9>;
         };
@@ -122,6 +122,11 @@
         search {
             bindings = <&kp LA(F)>;
             key-positions = <12 22>;
+        };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 11>;
         };
     };
 
