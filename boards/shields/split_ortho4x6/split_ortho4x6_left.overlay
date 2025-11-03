@@ -1,4 +1,3 @@
-
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
@@ -77,7 +76,6 @@
     };
 };
 
-
 &i2c0 {
     status = "okay";
     compatible = "nordic,nrf-twim";
@@ -91,6 +89,6 @@
         status = "okay";
         compatible = "azoteq,iqs7211e";
         reg = <0x56>;
-        irq-gpios = <&gpio0 13 GPIO_PULL_UP>; 
+        irq-gpios = <&gpio0 13 GPIO_PULL_UP>;
     };
 };

@@ -13,7 +13,7 @@
         22
     >;
 };
-                
+          
 / {
     chosen {
         zmk,physical-layout = &physical_layout0;
@@ -52,7 +52,7 @@
 			,<&akdk_d 3 GPIO_ACTIVE_HIGH>
             ;
     };
-    
+
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
@@ -63,7 +63,7 @@
             &zip_x_scaler 1 1
             &zip_y_scaler 1 1
         >;
-        
+
         scroller {
             layers = <5 2>;
             input-processors = <
@@ -77,7 +77,7 @@
 
     trackpad_split_listener: trackpad_split_listener {
         compatible = "zmk,input-listener";
-        device = <&trackpad_split>;   
+        device = <&trackpad_split>;
         status = "okay";
 
         // スクロール用(カーソル操作はできない) 
