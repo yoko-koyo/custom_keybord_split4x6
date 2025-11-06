@@ -95,7 +95,7 @@
         };
 
         shift+tab {
-            bindings = <&kp DELETE>;
+            bindings = <&kp TAB>;
             key-positions = <8 9>;
         };
 
