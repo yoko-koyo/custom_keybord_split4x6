@@ -133,6 +133,11 @@
             bindings = <&kp RIGHT_SHIFT>;
             key-positions = <21 22>;
         };
+
+        alt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <14 15>;
+        };
     };
 
     keymap {
