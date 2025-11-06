@@ -74,11 +74,6 @@
             key-positions = <12 13>;
         };
 
-        right-shift {
-            bindings = <&kp RIGHT_SHIFT>;
-            key-positions = <21 22>;
-        };
-
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <20 21>;
@@ -99,9 +94,49 @@
             key-positions = <20 19>;
         };
 
-        del {
-            bindings = <&kp DELETE>;
+        shift+tab {
+            bindings = <&kp LS(TAB)>;
             key-positions = <8 9>;
+        };
+
+        windowLeft {
+            bindings = <&kp LC(LEFT_ARROW)>;
+            key-positions = <1 0>;
+        };
+
+        windowRight {
+            bindings = <&kp LC(RIGHT_ARROW)>;
+            key-positions = <10 11>;
+        };
+
+        windowUp {
+            bindings = <&kp LC(UP_ARROW)>;
+            key-positions = <15 19>;
+        };
+
+        windowDown {
+            bindings = <&kp LC(DOWN_ARROW)>;
+            key-positions = <13 21>;
+        };
+
+        search {
+            bindings = <&kp LA(F)>;
+            key-positions = <12 22>;
+        };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 11>;
+        };
+
+        shift {
+            bindings = <&kp RIGHT_SHIFT>;
+            key-positions = <21 22>;
+        };
+
+        alt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <14 15>;
         };
     };
 
