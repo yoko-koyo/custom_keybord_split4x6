@@ -71,7 +71,7 @@
 
         left-shift {
             bindings = <&kp LEFT_SHIFT>;
-            key-positions = <40 36>;
+            key-positions = <40>;
             slow-release;
         };
 
