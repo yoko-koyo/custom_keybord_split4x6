@@ -115,6 +115,11 @@
             bindings = <&kp LEFT_ALT>;
             key-positions = <14 15>;
         };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <19 20>;
+        };
     };
 
     keymap {
@@ -123,17 +128,17 @@
         layer_0 {
             bindings = <
 &kp Q           &kp W         &kp E             &kp R  &kp T                   &behaviorHoldTap180 6 LA(F)  &kp LA(LG(RIGHT_ARROW))  &kp Y                             &kp U  &kp I      &kp O       &kp P
-&kp A           &kp S         &kp D             &kp F  &kp G                                                &kp LA(LG(LEFT_ARROW))   &kp H                             &kp J  &kp K      &kp L       &kp BACKSPACE
-&kp Z           &kp X         &kp C             &kp V  &kp B                                                                         &kp N                             &kp M  &kp COMMA  &kp PERIOD  &kp TAB
+&kp A           &kp S         &kp D             &kp F  &kp G                                                &kp LA(LG(LEFT_ARROW))   &kp H                             &kp J  &kp K      &kp L       &kp MINUS
+&kp Z           &kp X         &kp C             &kp V  &kp B                                                                         &kp N                             &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
 &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &mt LEFT_COMMAND LANG2  &kp SPACE                    &kp ENTER                &behaviorHoldTap180 1 LANGUAGE_1                                &kp ESCAPE
             >;
         };
 
         layer_1 {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT    &kp LS(LG(R))  &trans  &kp DOLLAR         &kp AMPERSAND   &kp UP_ARROW    &kp MINUS         &kp EQUAL
-&kp QUESTION     &kp HASH      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON                     &trans  &kp DOUBLE_QUOTES  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp BACKSPACE
-&kp CARET        &kp ASTERISK  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON                         &kp SQT            &kp SLASH       &kp LESS_THAN   &kp GREATER_THAN  &kp TAB
+&kp EXCLAMATION  &kp AT_SIGN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT    &kp LS(LG(R))  &trans  &kp DOLLAR         &kp AMPERSAND   &kp UP_ARROW    &kp GRAVE         &kp BACKSLASH
+&kp QUESTION     &kp HASH      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON                     &trans  &kp DOUBLE_QUOTES  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp UNDERSCORE
+&kp CARET        &kp ASTERISK  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON                         &kp SQT            &kp SLASH       &kp LESS_THAN   &kp GREATER_THAN  &kp PLUS
 &trans           &trans        &trans                &trans                 &trans         &trans         &trans  &trans                                                               &trans
             >;
         };
@@ -149,7 +154,7 @@
 
         layer_3 {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &trans                &trans  &trans  &kp PIPE   &kp NON_US_BACKSLASH  &kp LA(UP_ARROW)    &kp UNDERSCORE       &kp PLUS
+&kp F1  &kp F2   &kp F3   &kp F4   &trans                &trans  &trans  &kp PIPE   &kp NON_US_BACKSLASH  &kp LA(UP_ARROW)    &kp TILDE            &kp PIPE
 &kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(NUMBER_4))          &trans  &trans     &kp LA(LEFT_ARROW)    &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(UNDERSCORE)
 &kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))                        &kp GRAVE  &kp TILDE             &trans              &trans               &trans
 &trans  &trans   &trans   &trans   &trans                &trans  &trans  &trans                                                                    &trans
