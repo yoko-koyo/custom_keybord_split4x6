@@ -71,7 +71,8 @@
 
         left-shift {
             bindings = <&kp LEFT_SHIFT>;
-            key-positions = <12 13>;
+            key-positions = <37 40>;
+            slow-release;
         };
 
         backspace {
@@ -118,6 +119,16 @@
 
         tab {
             bindings = <&kp TAB>;
+            key-positions = <30 31>;
+        };
+
+        windowLeft {
+            bindings = <&kp LC(LEFT_ARROW)>;
+            key-positions = <14 15>;
+        };
+
+        windowRight {
+            bindings = <&kp LC(RIGHT_ARROW)>;
             key-positions = <19 20>;
         };
     };
@@ -163,9 +174,9 @@
 
         layer_4 {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans  &trans  &sys_reset   &trans              &trans    &trans    &trans  &bt BT_CLR_ALL
-&trans        &trans        &trans  &trans  &trans          &bootloader  &trans              &mkp MB2  &mkp MB1  &mo 5   &trans
-&trans        &trans        &trans  &trans  &trans                       &trans              &trans    &trans    &trans  &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans  &trans  &sys_reset   &trans              &trans    &trans  &trans    &bt BT_CLR_ALL
+&trans        &trans        &trans  &trans  &trans          &bootloader  &trans              &mkp MB2  &mo 5   &mkp MB1  &trans
+&trans        &trans        &trans  &trans  &trans                       &trans              &trans    &trans  &trans    &trans
 &trans        &trans        &trans  &trans  &trans  &trans  &kp LG(W)    &kp LG(LEFT_ARROW)                              &trans
             >;
         };
