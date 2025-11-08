@@ -75,12 +75,12 @@
         };
 
         backspace {
-            bindings = <&kp MINUS>;
+            bindings = <&kp BACKSPACE>;
             key-positions = <20 21>;
         };
 
         alt+bcsp {
-            bindings = <&kp EQUAL>;
+            bindings = <&kp LA(BACKSPACE)>;
             key-positions = <9 10>;
         };
 
@@ -91,7 +91,7 @@
 
         windowDown {
             bindings = <&kp LC(DOWN_ARROW)>;
-            key-positions = <13 21>;
+            key-positions = <14 20>;
         };
 
         search {
@@ -129,7 +129,7 @@
 
         layer_1 {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT    &kp LS(LG(R))  &trans  &kp DOLLAR         &kp AMPERSAND   &kp UP_ARROW    &kp GRAVE         &kp BACKSLASH
+&kp EXCLAMATION  &kp AT_SIGN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT    &kp LS(LG(R))  &trans  &kp DOLLAR         &kp AMPERSAND   &kp UP_ARROW    &kp MINUS         &kp EQUAL
 &kp QUESTION     &kp HASH      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON                     &trans  &kp DOUBLE_QUOTES  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp BACKSPACE
 &kp CARET        &kp ASTERISK  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON                         &kp SQT            &kp SLASH       &kp LESS_THAN   &kp GREATER_THAN  &kp TAB
 &trans           &trans        &trans                &trans                 &trans         &trans         &trans  &trans                                                               &trans
@@ -147,10 +147,10 @@
 
         layer_3 {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &trans                &trans  &trans  &trans  &trans              &kp LA(UP_ARROW)    &kp TILDE            &kp PIPE
-&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(NUMBER_4))          &trans  &trans  &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(UNDERSCORE)
-&kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))                        &trans  &trans              &trans              &trans               &trans
-&trans  &trans   &trans   &trans   &trans                &trans  &trans  &trans                                                               &trans
+&kp F1  &kp F2   &kp F3   &kp F4   &trans                &trans  &trans  &kp PIPE   &kp NON_US_BACKSLASH  &kp LA(UP_ARROW)    &kp UNDERSCORE       &kp PLUS
+&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(NUMBER_4))          &trans  &trans     &kp LA(LEFT_ARROW)    &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(UNDERSCORE)
+&kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))                        &kp GRAVE  &kp TILDE             &trans              &trans               &trans
+&trans  &trans   &trans   &trans   &trans                &trans  &trans  &trans                                                                    &trans
             >;
         };
 
