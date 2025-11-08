@@ -114,7 +114,7 @@
 
         alt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <14 15>;
+            key-positions = <26 25>;
         };
 
         tab {
