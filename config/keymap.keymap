@@ -89,7 +89,7 @@
         };
 
         del {
-            bindings = <&kp DELETE>;
+            bindings = <&kp LA(BACKSPACE)>;
             key-positions = <9 10>;
         };
 
