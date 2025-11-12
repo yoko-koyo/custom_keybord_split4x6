@@ -95,17 +95,7 @@
 
         search {
             bindings = <&kp LA(F)>;
-            key-positions = <12 22>;
-        };
-
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <0 11>;
-        };
-
-        alt {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <26 25>;
+            key-positions = <12 0>;
         };
 
         windowUp {
@@ -129,12 +119,12 @@
         };
 
         tabRight {
-            bindings = <&kp LA(LG(LEFT_ARROW))>;
+            bindings = <&kp LA(LG(RIGHT))>;
             key-positions = <30 29>;
         };
 
         tabLeft {
-            bindings = <&kp LG(LA(RIGHT_ARROW))>;
+            bindings = <&kp LG(LA(LEFT_ARROW))>;
             key-positions = <25 26>;
         };
     };
