@@ -77,7 +77,7 @@
             slow-release;
         };
 
-        enter {
+        back {
             bindings = <&kp ENTER>;
             key-positions = <20 21>;
             timeout-ms = <100>;
