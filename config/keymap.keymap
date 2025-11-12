@@ -83,6 +83,16 @@
             timeout-ms = <222>;
         };
 
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <30 31>;
+        };
+
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <9 10>;
+        };
+
         search {
             bindings = <&kp LA(F)>;
             key-positions = <12 22>;
@@ -96,11 +106,6 @@
         alt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <26 25>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <30 31>;
         };
 
         windowUp {
@@ -123,9 +128,14 @@
             key-positions = <19 20>;
         };
 
-        del {
-            bindings = <&kp DELETE>;
-            key-positions = <9 10>;
+        tabLeft {
+            bindings = <&kp LC(LEFT_ARROW)>;
+            key-positions = <8 9>;
+        };
+
+        tabRight {
+            bindings = <&kp LC(RIGHT_ARROW)>;
+            key-positions = <19 20>;
         };
     };
 
