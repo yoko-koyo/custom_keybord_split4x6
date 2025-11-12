@@ -73,20 +73,14 @@
 
         left-shift {
             bindings = <&kp LEFT_SHIFT>;
-            key-positions = <40 36>;
+            key-positions = <38 39>;
             slow-release;
         };
 
-        backspace {
-            bindings = <&kp BACKSPACE>;
+        enter {
+            bindings = <&kp ENTER>;
             key-positions = <20 21>;
             timeout-ms = <100>;
-        };
-
-        alt+bcsp {
-            bindings = <&kp LA(BACKSPACE)>;
-            key-positions = <9 10>;
-            timeout-ms = <50>;
         };
 
         search {
@@ -97,11 +91,6 @@
         esc {
             bindings = <&kp ESCAPE>;
             key-positions = <0 11>;
-        };
-
-        shift {
-            bindings = <&kp RIGHT_SHIFT>;
-            key-positions = <21 22>;
         };
 
         alt {
@@ -133,6 +122,11 @@
             bindings = <&kp LC(RIGHT_ARROW)>;
             key-positions = <19 20>;
         };
+
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <9 10>;
+        };
     };
 
     keymap {
@@ -140,10 +134,10 @@
 
         layer_0 {
             bindings = <
-&kp Q           &kp W         &kp E             &kp R  &kp T                   &mo 6      &kp TAB             &kp Y                             &kp U  &kp I      &kp O       &kp P
-&kp A           &kp S         &kp D             &kp F  &kp G                              &kp BACKSPACE       &kp H                             &kp J  &kp K      &kp L       &kp MINUS
-&kp Z           &kp X         &kp C             &kp V  &kp B                                                  &kp N                             &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &mt LEFT_COMMAND LANG2  &kp SPACE  &behaviorTapDance1  &behaviorHoldTap180 1 LANGUAGE_1                                &kp ESCAPE
+&kp Q           &kp W         &kp E             &kp R  &kp T                   &mo 6      &kp TAB        &kp Y                             &kp U  &kp I      &kp O       &kp P
+&kp A           &kp S         &kp D             &kp F  &kp G                              &kp BACKSPACE  &kp H                             &kp J  &kp K      &kp L       &kp MINUS
+&kp Z           &kp X         &kp C             &kp V  &kp B                                             &kp N                             &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &mt LEFT_COMMAND LANG2  &kp SPACE  &kp BACKSPACE  &behaviorHoldTap180 1 LANGUAGE_1                                &kp ESCAPE
             >;
         };
 
