@@ -79,7 +79,7 @@
 
         back {
             bindings = <&kp BACKSPACE>;
-            key-positions = <10 9>;
+            key-positions = <20 21>;
             timeout-ms = <222>;
         };
 
@@ -90,7 +90,7 @@
 
         del {
             bindings = <&kp DELETE>;
-            key-positions = <20 21>;
+            key-positions = <9 10>;
         };
 
         windowUp {
