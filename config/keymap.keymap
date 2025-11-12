@@ -80,7 +80,7 @@
         back {
             bindings = <&kp BACKSPACE>;
             key-positions = <20 21>;
-            timeout-ms = <100>;
+            timeout-ms = <222>;
         };
 
         search {
