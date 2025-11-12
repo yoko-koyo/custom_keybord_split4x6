@@ -79,12 +79,18 @@
         device = <&trackpad_split>;
         status = "okay";
 
-        // スクロール用(カーソル操作はできない) 
         input-processors = <
             &zip_xy_to_scroll_mapper                            /* XY → スクロール変換 */
             &zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)    /* スクロール方向調整（Y反転） */
             &zip_scroll_scaler 1 20                             /* スクロール速度 */
         >;
+
+        // スクロール用(カーソル操作はできない) 
+        // input-processors = <
+        //     &zip_xy_to_scroll_mapper                            /* XY → スクロール変換 */
+        //     &zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)    /* スクロール方向調整（Y反転） */
+        //     &zip_scroll_scaler 1 20                             /* スクロール速度 */
+        // >;
 
         // 通常のカースル操作用
         // input-processors = <
