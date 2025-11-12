@@ -43,7 +43,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BEHAVIORTAPDANCE1";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_1>, <&kp ENTER>, <&mo 1>;
+            bindings = <&kp BACKSPACE>, <&kp ENTER>;
+
+            tapping-term-ms = <180>;
         };
 
         behaviorHoldTap150: behaviorHoldTap150 {
@@ -138,10 +140,10 @@
 
         layer_0 {
             bindings = <
-&kp Q           &kp W         &kp E             &kp R  &kp T                   &mo 6      &kp TAB        &kp Y                             &kp U  &kp I      &kp O       &kp P
-&kp A           &kp S         &kp D             &kp F  &kp G                              &kp BACKSPACE  &kp H                             &kp J  &kp K      &kp L       &kp MINUS
-&kp Z           &kp X         &kp C             &kp V  &kp B                                             &kp N                             &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &mt LEFT_COMMAND LANG2  &kp SPACE  &kp ENTER      &behaviorHoldTap180 1 LANGUAGE_1                                &kp ESCAPE
+&kp Q           &kp W         &kp E             &kp R  &kp T                   &mo 6      &kp TAB             &kp Y                             &kp U  &kp I      &kp O       &kp P
+&kp A           &kp S         &kp D             &kp F  &kp G                              &kp BACKSPACE       &kp H                             &kp J  &kp K      &kp L       &kp MINUS
+&kp Z           &kp X         &kp C             &kp V  &kp B                                                  &kp N                             &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &mt LEFT_COMMAND LANG2  &kp SPACE  &behaviorTapDance1  &behaviorHoldTap180 1 LANGUAGE_1                                &kp ESCAPE
             >;
         };
 
