@@ -87,16 +87,6 @@
             timeout-ms = <50>;
         };
 
-        windowUp {
-            bindings = <&kp LC(UP_ARROW)>;
-            key-positions = <15 19>;
-        };
-
-        windowDown {
-            bindings = <&kp LC(DOWN_ARROW)>;
-            key-positions = <14 20>;
-        };
-
         search {
             bindings = <&kp LA(F)>;
             key-positions = <12 22>;
@@ -120,6 +110,16 @@
         tab {
             bindings = <&kp TAB>;
             key-positions = <30 31>;
+        };
+
+        windowUp {
+            bindings = <&kp LC(UP_ARROW)>;
+            key-positions = <15 19>;
+        };
+
+        windowDown {
+            bindings = <&kp LC(DOWN_ARROW)>;
+            key-positions = <14 20>;
         };
 
         windowLeft {

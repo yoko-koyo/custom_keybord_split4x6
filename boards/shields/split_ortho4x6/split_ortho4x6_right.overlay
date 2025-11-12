@@ -5,7 +5,6 @@
 
 &zip_temp_layer {
     require-prior-idle-ms = <200>;
-    // マウスレイヤー時の除外キー位置を設定
     excluded-positions = <
         19
         20
