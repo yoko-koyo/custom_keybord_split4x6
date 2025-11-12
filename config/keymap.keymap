@@ -128,14 +128,14 @@
             key-positions = <19 20>;
         };
 
-        tabLeft {
-            bindings = <&kp LC(LEFT_ARROW)>;
-            key-positions = <8 9>;
+        tabRight {
+            bindings = <&kp LA(LG(LEFT_ARROW))>;
+            key-positions = <30 29>;
         };
 
-        tabRight {
-            bindings = <&kp LC(RIGHT_ARROW)>;
-            key-positions = <19 20>;
+        tabLeft {
+            bindings = <&kp LG(LA(RIGHT_ARROW))>;
+            key-positions = <25 26>;
         };
     };
 
