@@ -80,7 +80,7 @@
         back {
             bindings = <&kp BACKSPACE>;
             key-positions = <20 21>;
-            timeout-ms = <333>;
+            // timeout-ms = <333>;
         };
 
         tab {
@@ -88,10 +88,10 @@
             key-positions = <30 31>;
         };
 
-        del {
+        backAlt {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <9 10>;
-            timeout-ms = <333>;
+            // timeout-ms = <333>;
         };
 
         windowUp {
