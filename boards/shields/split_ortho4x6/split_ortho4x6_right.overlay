@@ -81,7 +81,6 @@
 
         input-processors = <
             &zip_xy_to_scroll_mapper                            /* XY → スクロール変換 */
-            &zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)    /* スクロール方向調整（Y反転） */
             &zip_scroll_scaler 1 20                             /* スクロール速度 */
         >;
 
@@ -156,8 +155,8 @@
         status = "okay";
         compatible = "pixart,paw3222";
         reg = <0>;
-        spi-max-frequency = <8000000>;
-        // spi-max-frequency = <2000000>; // デフォルト
+        // spi-max-frequency = <8000000>;
+        spi-max-frequency = <2000000>; // デフォルト
         irq-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
     };
 };
