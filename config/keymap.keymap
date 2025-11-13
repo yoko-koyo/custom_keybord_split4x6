@@ -131,7 +131,7 @@
         layer_0 {
             bindings = <
 &kp Q           &kp W         &kp E             &kp R  &kp T                   &mo 6      &kp TAB        &kp Y                             &kp U  &kp I      &kp O       &kp P
-&kp A           &kp S         &kp D             &kp F  &kp G                              &kp BACKSPACE  &kp H                             &kp J  &kp K      &lt 5 L     &kp MINUS
+&kp A           &kp S         &kp D             &kp F  &kp G                              &kp BACKSPACE  &kp H                             &kp J  &kp K      &kp L       &kp MINUS
 &kp Z           &kp X         &kp C             &kp V  &kp B                                             &kp N                             &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
 &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &mt LEFT_COMMAND LANG2  &kp SPACE  &kp ENTER      &behaviorHoldTap180 1 LANGUAGE_1                                &mt LEFT_SHIFT ESCAPE
             >;
