@@ -155,8 +155,8 @@
         status = "okay";
         compatible = "pixart,paw3222";
         reg = <0>;
-        // spi-max-frequency = <8000000>;
-        spi-max-frequency = <2000000>; // デフォルト
+        spi-max-frequency = <8000000>;
+        // spi-max-frequency = <2000000>; // デフォルト
         irq-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
     };
 };
