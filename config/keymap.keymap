@@ -79,18 +79,18 @@
 
         back {
             bindings = <&kp BACKSPACE>;
-            key-positions = <20 19>;
+            key-positions = <20 21>;
             timeout-ms = <333>;
         };
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <30 29>;
+            key-positions = <30 31>;
         };
 
         del {
             bindings = <&kp LA(BACKSPACE)>;
-            key-positions = <9 8>;
+            key-positions = <9 10>;
             timeout-ms = <333>;
         };
 
@@ -116,12 +116,12 @@
 
         tabRight {
             bindings = <&kp LA(LG(RIGHT))>;
-            key-positions = <21 22>;
+            key-positions = <40 20>;
         };
 
         tabLeft {
             bindings = <&kp LG(LA(LEFT_ARROW))>;
-            key-positions = <12 13>;
+            key-positions = <37 14>;
         };
     };
 
