@@ -79,19 +79,25 @@
 
         back {
             bindings = <&kp BACKSPACE>;
-            key-positions = <20 21>;
+            key-positions = <>;
+
             // timeout-ms = <333>;
+
+            timeout-ms = <333>;
         };
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <30 31>;
+            key-positions = <>;
         };
 
-        backAlt {
+        del {
             bindings = <&kp LA(BACKSPACE)>;
-            key-positions = <9 10>;
+            key-positions = <>;
+
             // timeout-ms = <333>;
+
+            timeout-ms = <333>;
         };
 
         windowUp {
@@ -116,12 +122,12 @@
 
         tabRight {
             bindings = <&kp LA(LG(RIGHT))>;
-            key-positions = <40 20>;
+            key-positions = <20 19>;
         };
 
         tabLeft {
             bindings = <&kp LG(LA(LEFT_ARROW))>;
-            key-positions = <37 14>;
+            key-positions = <14 15>;
         };
     };
 
