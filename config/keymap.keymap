@@ -83,7 +83,7 @@
 
             // timeout-ms = <333>;
 
-            timeout-ms = <333>;
+            timeout-ms = <200>;
         };
 
         tab {
@@ -97,7 +97,7 @@
 
             // timeout-ms = <333>;
 
-            timeout-ms = <333>;
+            timeout-ms = <200>;
         };
 
         windowUp {
