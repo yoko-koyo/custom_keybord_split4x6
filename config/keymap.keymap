@@ -82,8 +82,6 @@
             key-positions = <9 10>;
 
             // timeout-ms = <333>;
-
-            timeout-ms = <200>;
         };
 
         tab {
@@ -96,8 +94,6 @@
             key-positions = <8 9>;
 
             // timeout-ms = <333>;
-
-            timeout-ms = <200>;
         };
 
         windowUp {
