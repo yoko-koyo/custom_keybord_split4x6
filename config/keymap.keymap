@@ -79,7 +79,7 @@
 
         back {
             bindings = <&kp BACKSPACE>;
-            key-positions = <9 10>;
+            key-positions = <20 21>;
 
             // timeout-ms = <333>;
         };
@@ -91,7 +91,7 @@
 
         del {
             bindings = <&kp LA(BACKSPACE)>;
-            key-positions = <8 9>;
+            key-positions = <9 10>;
 
             // timeout-ms = <333>;
         };
