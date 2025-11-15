@@ -89,7 +89,7 @@
             key-positions = <30 31>;
         };
 
-        del {
+        altBack {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <9 10>;
 
@@ -108,12 +108,12 @@
 
         windowLeft {
             bindings = <&kp LC(LEFT_ARROW)>;
-            key-positions = <14 19>;
+            key-positions = <0 12>;
         };
 
         windowRight {
             bindings = <&kp LC(RIGHT_ARROW)>;
-            key-positions = <20 15>;
+            key-positions = <11 22>;
         };
 
         tabRight {
@@ -124,6 +124,11 @@
         tabLeft {
             bindings = <&kp LG(LA(LEFT_ARROW))>;
             key-positions = <14 15>;
+        };
+
+        search {
+            bindings = <&kp LA(F)>;
+            key-positions = <0 11>;
         };
     };
 
