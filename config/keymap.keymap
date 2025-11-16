@@ -82,6 +82,8 @@
             key-positions = <20 21>;
 
             // timeout-ms = <333>;
+
+            slow-release;
         };
 
         tab {
