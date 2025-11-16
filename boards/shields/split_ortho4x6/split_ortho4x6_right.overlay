@@ -79,10 +79,10 @@
         device = <&trackpad_split>;
         status = "okay";
 
-        input-processors = <
-            &zip_xy_to_scroll_mapper                            /* XY → スクロール変換 */
-            &zip_scroll_scaler 1 20                             /* スクロール速度 */
-        >;
+        // input-processors = <
+        //     &zip_xy_to_scroll_mapper                            /* XY → スクロール変換 */
+        //     &zip_scroll_scaler 1 20                             /* スクロール速度 */
+        // >;
 
         // スクロール用(カーソル操作はできない) 
         // input-processors = <
@@ -92,11 +92,11 @@
         // >;
 
         // 通常のカースル操作用
-        // input-processors = <
-        //     &zip_temp_layer 4 10000
-        //     &zip_x_scaler 30 21
-        //     &zip_y_scaler 30 21
-        // >;
+        input-processors = <
+            &zip_temp_layer 4 10000
+            &zip_x_scaler 30 21
+            &zip_y_scaler 30 21
+        >;
 
         // scroller {
         //     layers = <5>;
