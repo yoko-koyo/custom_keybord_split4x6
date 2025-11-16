@@ -68,7 +68,7 @@
             input-processors = <
                 &zip_xy_to_scroll_mapper
                 &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
-                &zip_scroll_scaler 1 15
+                &zip_scroll_scaler 2 15
             >;
             process-next;
         };
@@ -94,8 +94,8 @@
         // 通常のカースル操作用
         input-processors = <
             &zip_temp_layer 4 10000
-            &zip_x_scaler 30 21
-            &zip_y_scaler 30 21
+            &zip_x_scaler 25 18
+            &zip_y_scaler 25 18
         >;
 
         // scroller {
