@@ -79,7 +79,7 @@
 
         back {
             bindings = <&kp BACKSPACE>;
-            key-positions = <20 21>;
+            key-positions = <>;
 
             // timeout-ms = <333>;
 
@@ -88,12 +88,12 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <30 31>;
+            key-positions = <>;
         };
 
         altBack {
             bindings = <&kp LA(BACKSPACE)>;
-            key-positions = <9 10>;
+            key-positions = <>;
 
             // timeout-ms = <333>;
         };
@@ -139,10 +139,10 @@
 
         layer_0 {
             bindings = <
-&kp Q           &kp W         &kp E             &kp R  &kp T                   &mo 6      &kp TAB        &kp Y                             &kp U  &kp I      &kp O       &kp P
-&kp A           &kp S         &kp D             &kp F  &kp G                              &kp BACKSPACE  &kp H                             &kp J  &kp K      &kp L       &kp MINUS
-&kp Z           &kp X         &kp C             &kp V  &kp B                                             &kp N                             &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &mt LEFT_COMMAND LANG2  &kp SPACE  &kp ENTER      &behaviorHoldTap180 1 LANGUAGE_1                                &mt LEFT_SHIFT ESCAPE
+&kp Q           &kp W         &kp E             &kp R  &kp T                   &mo 6      &kp EQUAL  &kp Y                             &kp U  &kp I      &kp O       &kp P
+&kp A           &kp S         &kp D             &kp F  &kp G                              &kp MINUS  &kp H                             &kp J  &kp K      &kp L       &kp BACKSPACE
+&kp Z           &kp X         &kp C             &kp V  &kp B                                         &kp N                             &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT TAB
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &mt LEFT_COMMAND LANG2  &kp SPACE  &kp ENTER  &behaviorHoldTap180 1 LANGUAGE_1                                &mt LEFT_SHIFT ESCAPE
             >;
         };
 
@@ -158,8 +158,8 @@
         layer_2 {
             bindings = <
 &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))  &trans              &trans               &trans  &trans  &trans  &kp SLASH   &kp N7        &kp N8        &kp N9        &kp N0
-&kp LG(F12)           &kp LC(TAB)     &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &trans          &trans  &kp PERIOD  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp UNDERSCORE
-&trans                &trans          &kp LA(LG(O))       &kp LA(F)            &trans                  &kp N0      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS
+&kp LG(F12)           &kp LC(TAB)     &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &trans          &trans  &kp PERIOD  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans
+&trans                &trans          &kp LA(LG(O))       &kp LA(F)            &trans                  &kp N0      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
 &trans                &trans          &trans              &trans               &trans  &trans  &trans  &trans                                                &trans
             >;
         };
