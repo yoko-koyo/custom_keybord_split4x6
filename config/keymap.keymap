@@ -132,6 +132,11 @@
             bindings = <&kp LA(F)>;
             key-positions = <0 11>;
         };
+
+        scroll {
+            bindings = <&mo 2>;
+            key-positions = <13 14>;
+        };
     };
 
     keymap {
@@ -167,7 +172,7 @@
         layer_3 {
             bindings = <
 &kp F1  &kp F2   &kp F3   &kp F4   &trans                &trans  &trans  &kp PIPE   &kp BACKSLASH       &kp LA(UP_ARROW)    &kp UNDERSCORE       &kp PLUS
-&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(NUMBER_4))          &trans  &trans     &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(UNDERSCORE)
+&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(NUMBER_4))          &trans  &trans     &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(BACKSPACE)
 &kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))                        &kp GRAVE  &kp TILDE           &trans              &trans               &trans
 &trans  &trans   &trans   &trans   &trans                &trans  &trans  &trans                                                                  &trans
             >;
