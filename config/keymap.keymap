@@ -110,12 +110,12 @@
 
         windowLeft {
             bindings = <&kp LC(LEFT_ARROW)>;
-            key-positions = <0 12>;
+            key-positions = <12 13 14>;
         };
 
         windowRight {
             bindings = <&kp LC(RIGHT_ARROW)>;
-            key-positions = <11 22>;
+            key-positions = <22 20 21>;
         };
 
         tabRight {
