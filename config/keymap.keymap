@@ -110,22 +110,22 @@
 
         windowLeft {
             bindings = <&kp LC(LEFT_ARROW)>;
-            key-positions = <2 3 1>;
+            key-positions = <25 26>;
         };
 
         windowRight {
             bindings = <&kp LC(RIGHT_ARROW)>;
-            key-positions = <8 9 10>;
+            key-positions = <29 30>;
         };
 
         tabRight {
             bindings = <&kp LA(LG(RIGHT))>;
-            key-positions = <20 19 21>;
+            key-positions = <30 31>;
         };
 
         tabLeft {
             bindings = <&kp LG(LA(LEFT_ARROW))>;
-            key-positions = <14 15 13>;
+            key-positions = <24 25>;
         };
 
         search {
