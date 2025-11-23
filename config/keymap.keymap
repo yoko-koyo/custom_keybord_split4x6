@@ -115,17 +115,17 @@
 
         windowRight {
             bindings = <&kp LC(RIGHT_ARROW)>;
-            key-positions = <29 30>;
+            key-positions = <30 29>;
         };
 
         tabRight {
             bindings = <&kp LA(LG(RIGHT))>;
-            key-positions = <30 31>;
+            key-positions = <19 20>;
         };
 
         tabLeft {
             bindings = <&kp LG(LA(LEFT_ARROW))>;
-            key-positions = <24 25>;
+            key-positions = <14 15>;
         };
 
         search {
