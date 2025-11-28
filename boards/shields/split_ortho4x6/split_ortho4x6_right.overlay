@@ -58,7 +58,7 @@
 
         input-processors = <
             &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
-            &zip_temp_layer 4 10000
+            &zip_temp_layer 4 10000000
             &zip_x_scaler 1 1
             &zip_y_scaler 1 1
         >;
@@ -68,7 +68,7 @@
             input-processors = <
                 &zip_xy_to_scroll_mapper
                 &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
-                &zip_scroll_scaler 2 14
+                &zip_scroll_scaler 1 13
             >;
             process-next;
         };
@@ -155,8 +155,8 @@
         status = "okay";
         compatible = "pixart,paw3222";
         reg = <0>;
-        spi-max-frequency = <8000000>;
-        // spi-max-frequency = <2000000>; // デフォルト
+        // spi-max-frequency = <8000000>;
+        spi-max-frequency = <2000000>; // デフォルト
         irq-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
     };
 };
