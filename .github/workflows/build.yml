@@ -3,4 +3,5 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    # @main を消して、最後に成功した時期のタグ @v0.1.0 に変更します
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.1.0
