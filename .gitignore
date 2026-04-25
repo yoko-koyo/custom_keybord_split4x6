@@ -1,0 +1,19 @@
+# ZMK / West Build Artifacts
+.west/
+build/
+
+# ZMK / Zephyr Source Tree (Local Fetch)
+# ビルド時にローカルにダウンロードされるソースコード類
+modules/
+zephyr/
+zmk/
+optional/
+
+# Drivers (External Modules)
+# west.ymlで管理されており、ビルド時に取得されるもの
+zmk-driver-iqs7211e/
+zmk-driver-paw3222/
+
+# Local Scripts
+# 自分で作成したビルドスクリプトをリポジトリに含めたくない場合
+build_local.sh
