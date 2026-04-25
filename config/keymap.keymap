@@ -299,7 +299,7 @@
 
         combo_minus {
             bindings = <&kp MINUS>;
-            key-positions = <20 21 17>;
+            key-positions = <20 21>;
         };
 
         // Delete : 右手上段端付近
