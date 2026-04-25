@@ -95,8 +95,6 @@
         };
     };
 
-
-
     behaviors {
         hml: home_row_layer_left {
             compatible = "zmk,behavior-hold-tap";
@@ -247,73 +245,6 @@
     combos {
         compatible = "zmk,combos";
 
-        left-shift {
-            bindings = <&kp LEFT_SHIFT>;
-            key-positions = <13 14>;
-            slow-release;
-        };
-
-        back {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <>;
-
-            // timeout-ms = <333>;
-
-            slow-release;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <>;
-        };
-
-        altBack {
-            bindings = <&kp LA(BACKSPACE)>;
-            key-positions = <>;
-
-            // timeout-ms = <333>;
-        };
-
-        windowUp {
-            bindings = <&kp LC(UP_ARROW)>;
-            key-positions = <15 19>;
-        };
-
-        windowDown {
-            bindings = <&kp LC(DOWN_ARROW)>;
-            key-positions = <14 20>;
-        };
-
-        windowLeft {
-            bindings = <&kp LC(LEFT_ARROW)>;
-            key-positions = <25 26>;
-        };
-
-        windowRight {
-            bindings = <&kp LC(RIGHT_ARROW)>;
-            key-positions = <30 29>;
-        };
-
-        tabRight {
-            bindings = <&kp LA(LG(RIGHT))>;
-            key-positions = <19 20>;
-        };
-
-        tabLeft {
-            bindings = <&kp LG(LA(LEFT_ARROW))>;
-            key-positions = <14 15>;
-        };
-
-        search {
-            bindings = <&kp LA(F)>;
-            key-positions = <0 11>;
-        };
-
-        scroll {
-            bindings = <&kp RIGHT_SHIFT>;
-            key-positions = <20 21>;
-        };
-
         /* ============================================================
            CATEGORY: SYMBOL MACROS (snake_case)
            =========================================================== */
@@ -322,28 +253,28 @@
 
         combo_parens {
             bindings = <&macro_parens>;
-            key-positions = <6 7 8>;
+            key-positions = <8 10 9>;
         };
 
         // [ ] : 右手ホーム段 [J] + [K]
 
         combo_brackets {
             bindings = <&macro_brackets>;
-            key-positions = <16 17 18>;
+            key-positions = <19 20 21>;
         };
 
         // { } : 右手下段 [M] + [,]
 
         combo_braces {
             bindings = <&macro_braces>;
-            key-positions = <26 27 28>;
+            key-positions = <31 30 29>;
         };
 
         // < > : 右手下段 [,] + [.]
 
         combo_angles {
             bindings = <&macro_angles>;
-            key-positions = <27 28>;
+            key-positions = <31 30>;
         };
 
         /* --- 左手側：引用符 --- */
@@ -351,14 +282,14 @@
 
         combo_squotes {
             bindings = <&macro_squotes>;
-            key-positions = <6 5>;
+            key-positions = <7 8>;
         };
 
         // " " : 左手ホーム段 [S] + [D]
 
         combo_dquotes {
             bindings = <&macro_dquotes>;
-            key-positions = <15 16>;
+            key-positions = <18 19>;
         };
 
         /* ============================================================
@@ -368,21 +299,21 @@
 
         combo_minus {
             bindings = <&kp MINUS>;
-            key-positions = <17 18>;
+            key-positions = <20 21 17>;
         };
 
         // Delete : 右手上段端付近
 
         combo_eql {
             bindings = <&kp EQUAL>;
-            key-positions = <7 8>;
+            key-positions = <10 9>;
         };
 
         // Escape : 右手ホーム段 [K] + [右端キー]
 
         combo_esc {
             bindings = <&kp ESC>;
-            key-positions = <18 16>;
+            key-positions = <21 19>;
         };
 
         m_if {
@@ -392,17 +323,22 @@
 
         combo_slash {
             bindings = <&kp SLASH>;
-            key-positions = <26 27>;
+            key-positions = <29 28>;
         };
 
         bs {
             bindings = <&kp BSPC>;
-            key-positions = <16 17>;
+            key-positions = <20 19>;
         };
 
         altbs {
             bindings = <&kp LA(BSPC)>;
-            key-positions = <7 6>;
+            key-positions = <9 8>;
+        };
+
+        boot {
+            bindings = <&bootloader>;
+            key-positions = <33 34 35 41>;
         };
     };
 
@@ -438,10 +374,10 @@
 
         layer_3 {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &trans                &trans  &trans  &kp PIPE   &kp BACKSLASH       &kp LA(UP_ARROW)    &kp UNDERSCORE       &kp PLUS
+&kp F1  &kp F2   &kp F3   &kp F4   &trans          &trans  &trans  &kp PIPE   &kp BACKSLASH       &kp LA(UP_ARROW)    &kp UNDERSCORE       &kp PLUS
 &kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(N4))          &trans  &trans     &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(BACKSPACE)
-&kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))                        &kp GRAVE  &kp TILDE           &trans              &trans               &trans
-&trans  &trans   &trans   &trans   &trans                &trans  &trans  &trans                                                                  &trans
+&kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))                  &kp GRAVE  &kp TILDE           &trans              &trans               &trans
+&trans  &trans   &trans   &trans   &trans          &trans  &trans  &trans                                                                  &trans
             >;
         };
 
