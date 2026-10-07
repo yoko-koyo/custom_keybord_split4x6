@@ -1,4 +1,4 @@
-identifier: akdk_bt1
+identifier: akdk_bt1/nrf52840
 name: akdk_bt1
 type: mcu
 arch: arm
@@ -12,3 +12,4 @@ supported:
   - ieee802154
   - pwm
   - watchdog
+vendor: others

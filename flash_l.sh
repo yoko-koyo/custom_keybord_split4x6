@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # --- 設定 ---
-TARGET="split4x6_r"
+TARGET="split4x6_l"
 UF2_PATH="./build/${TARGET}/zephyr/zmk.uf2"
+# 左手側を接続した際のドライブ名（一般的には右手と同じですが、区別が必要なら変更してください）
 DRIVE_NAME="NRF52BOOT"
 
 echo "========================================"
-echo "👉 右手側 (split4x6_r) のビルドを開始します..."
+echo "👈 左手側 (split4x6_l) のビルドを開始します..."
 echo "========================================"
 
-# Kconfigの警告を無視するフラグ（-DCONFIG_ZMK_KCONFIG_WARNINGS_AS_ERRORS=n）を追加
-# これにより LVGL 関連の古い警告でビルドが止まるのを防ぎます
+# Kconfigの警告を無視するフラグ
 export CMAKE_ARGS="-DCONFIG_ZMK_KCONFIG_WARNINGS_AS_ERRORS=n"
 
 # ビルド実行
@@ -23,11 +23,13 @@ fi
 
 echo "✅ ビルド成功！ダブルクリック待ち..."
 
+# マウントされるまでループ
 while [ ! -d "/Volumes/$DRIVE_NAME" ]; do 
     sleep 1
 done
 
 echo "⚡️ 書き込み中..."
+# -X オプションは macOS 固有の拡張属性（._ ファイルなど）をコピーしないためのフラグです
 cp -X "$UF2_PATH" "/Volumes/$DRIVE_NAME/" 2>/dev/null || true
 
 sleep 2

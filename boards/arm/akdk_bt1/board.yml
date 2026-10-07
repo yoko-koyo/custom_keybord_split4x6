@@ -1,0 +1,6 @@
+board:
+  name: akdk_bt1
+  full_name: AKDK_BT1
+  vendor: others
+  socs:
+    - name: nrf52840

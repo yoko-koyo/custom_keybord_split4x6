@@ -1,4 +1,4 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#include "../../../config/keymap.keymap"
+#include "../../../config/split_ortho4x6.keymap"
