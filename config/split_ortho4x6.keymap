@@ -295,11 +295,12 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HM";
             #binding-cells = <2>;
-            tapping-term-ms = <195>;
+            tapping-term-ms = <190>;
 
             // quick-tap-ms = <190>;
 
             flavor = "hold-preferred";
+            hold-trigger-on-release;
             bindings = <&kp>, <&kp>;
         };
 
@@ -309,24 +310,35 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LT_K";
             #binding-cells = <2>;
-            tapping-term-ms = <195>;
+            tapping-term-ms = <190>;
             flavor = "hold-preferred";
 
             // quick-tap-ms = <10>;
-
+            hold-trigger-on-release;
             bindings = <&mo>, <&kp>;
         };
 
         // スペース用Hold-Tap
+
+        // st: st {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "ST";
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <180>;
+        //     require-prior-idle-ms = <100>;
+        //     flavor = "tap-preferred";
+        //     bindings = <&kp>, <&kp>;
+        // };
 
         st: st {
             compatible = "zmk,behavior-hold-tap";
             label = "ST";
             #binding-cells = <2>;
             tapping-term-ms = <180>;
-            quick-tap-ms = <195>;
-            require-prior-idle-ms = <100>;
+            quick-tap-ms = <178>;
+            require-prior-idle-ms = <179>;
             flavor = "tap-preferred";
+            hold-trigger-on-release;
             bindings = <&kp>, <&kp>;
         };
 
